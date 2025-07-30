@@ -1,0 +1,73 @@
+# ====================
+# Node.js dependencies
+# ====================
+node_modules/
+npm-debug.log
+yarn-error.log
+*.log
+
+# ============
+# Build output
+# ============
+dist/
+build/
+out-tsc/
+bazel-out/
+tmp/
+.angular/cache/
+.sass-cache/
+coverage/
+libpeerconnection.log
+testem.log
+
+# ==================
+# Docker and DevOps
+# ==================
+.dockerignore
+docker-compose.yml
+
+# ======================
+# IDEs and Editor Config
+# ======================
+# IntelliJ / WebStorm / Eclipse / Cloud9 / Sublime
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# VS Code - allow essential configs
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# ============
+# Environment
+# ============
+.env
+
+# =======
+# Testing
+# =======
+test/
+coverage/
+
+# ================
+# Misc system files
+# ================
+.DS_Store
+Thumbs.db
+
+# ============
+# Misc caches
+# ============
+.cache/
+.npm/
+typings/
+connect.lock
+.history/
+local-data/

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TociTech - Componentes de PC y Laptops</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">TociTech</h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="#products" class="nav-link">Productos</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Nosotros</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="cart-icon-container">
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </nav>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-menu">
+            <i class="fas fa-times close-mobile-nav"></i>
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link">Inicio</a></li>
+                <li><a href="#products" class="mobile-nav-link">Productos</a></li>
+                <li><a href="#about" class="mobile-nav-link">Nosotros</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="add-to-cart-message" class="add-to-cart-message">
+        Producto añadido al carrito <i class="fas fa-check-circle"></i>
+    </div>
+
+    <div id="checkout-confirmation-message" class="checkout-confirmation-message">
+        ¡Pago realizado con éxito! Gracias por tu compra. <i class="fas fa-check-circle"></i>
+    </div>
+
+    <!-- Carrusel de imágenes -->
+    <section id="home" class="hero-section">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="https://www.clarin.com/2023/06/04/dl-X8doTX_1200x0__1.jpg"
+                    alt="Potencia Inigualable para tu PC" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>Potencia Inigualable</h2>
+                    <p>Descubre los componentes que llevarán tu experiencia al siguiente nivel.</p>
+                    <a href="#products" class="btn btn-primary">Explorar Productos</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://thumbs.dreamstime.com/b/pc-de-juegos-con-luces-led-rgb-en-un-equipo-montado-componentes-hardware-colores-185705787.jpg"
+                    alt="Rendimiento Extremo para Gamers" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>Rendimiento Extremo</h2>
+                    <p>Componentes de última generación para gamers y profesionales.</p>
+                    <a href="#products" class="btn btn-primary">Ver Ofertas</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BGBD_STG/on/demandware.static/-/Library-Sites-SorianaSharedLib/default/dw5cd6b11c/.001_SearchBanner/SEO/SETUP%20GAMER.png"
+                    alt="Innovación y Calidad en cada componente" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>Innovación y Calidad</h2>
+                    <p>Construye tu equipo soñado con la mejor tecnología.</p>
+                    <a href="#products" class="btn btn-primary">Personaliza tu PC</a>
+                </div>
+            </div>
+            <button class="carousel-nav prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-nav next"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+        </div>
+    </section>
+
+    <!-- Sección de Categorías de Productos Destacadas -->
+    <section class="featured-categories">
+        <div class="container">
+            <h3>Categorías Destacadas</h3>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2vSxsedG7WtR3tP4UuZfXONjPt3JK2qoCzA&s"
+                        alt="Procesadores">
+                    <h4>Procesadores</h4>
+                    <p>El cerebro de tu PC, con la última tecnología y rendimiento sin igual.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="cpu">Ver CPUs</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://i.blogs.es/09647f/grafica/1366_2000.jpeg" alt="Tarjetas Gráficas">
+                    <h4>Tarjetas Gráficas</h4>
+                    <p>Imágenes impresionantes y rendimiento gráfico superi or para gaming y diseño.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="gpu">Ver GPUs</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://a-static.mlcdn.com.br/1500x1500/memoria-ram-8gb-ddr4-hyperx-fury-2400mhz-com-dissipador/magazineluiza/227723300/29e16aa7fae514c0bc5e2f485ced61e0.jpg"
+                        alt="Memorias RAM">
+                    <h4>Memorias RAM</h4>
+                    <p>Velocidad y multitarea sin límites para un flujo de trabajo impecable.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="ram">Ver RAM</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://m.media-amazon.com/images/I/71y8ZxXgVOL.jpg" alt="Almacenamiento">
+                    <h4>Almacenamiento</h4>
+                    <p>SSD ultrarrápidos y HDD de gran capacidad para todos tus archivos.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="almacenamiento">Ver
+                        Almacenamiento</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://img.pccomponentes.com/pcblog/1736809200000/que-es-una-placa-base-tipos-instalar-2.jpg"
+                        alt="Placas Base">
+                    <h4>Placas Base</h4>
+                    <p>La base sólida para construir tu sistema, con soporte para lo último en tecnología.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="placa">Ver Placas</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://gamefactor.mx/images/detalle/psg105071011690914311.png" alt="Fuentes de Poder">
+                    <h4>Fuentes de Poder</h4>
+                    <p>Energía estable y eficiente para todos tus componentes, garantizando seguridad.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="fuente">Ver Fuentes</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://www.geekno.com/wp-content/uploads/2019/11/refrigeracion-liquida-1280x720.jpg"
+                        alt="Refrigeración">
+                    <h4>Refrigeración</h4>
+                    <p>Mantén tu equipo a la temperatura ideal con soluciones de aire y líquido.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="refrigeracion">Ver
+                        Refrigeración</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://www.xtremepc.com.mx/cdn/shop/files/c377a71d-9949-42e6-89cb-d15bd554b428_800x.png?v=1732269565"
+                        alt="Gabinetes">
+                    <h4>Gabinetes</h4>
+                    <p>Estilo y funcionalidad para proteger y exhibir tus componentes.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="gabinete">Ver Gabinetes</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://i5.walmartimages.com.mx/samsmx/images/product-images/img_large/981010711l.jpg"
+                        alt="Monitores">
+                    <h4>Monitores</h4>
+                    <p>Experimenta imágenes nítidas y colores vibrantes con nuestros monitores de alta gama.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="monitor">Ver Monitores</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://ergo2play.com/cdn/shop/articles/M314_1080x.jpg?v=1633105598" alt="Periféricos">
+                    <h4>Periféricos</h4>
+                    <p>Completa tu setup con teclados, ratones y auriculares diseñados para el máximo rendimiento.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="periferico">Ver
+                        Periféricos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section id="products" class="product-section">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="product-filters">
+                <button class="btn btn-filter active" data-category="all">Mostrar Todos</button>
+            </div>
+            <div class="product-grid" id="product-list">
+                <!-- Carga de productos de manera dinámica -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Sobre Nosotros" -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Nuestra Trayectoria: Más de una Década de Innovación</h2>
+            <p class="about-intro">Desde un pequeño taller hasta convertirnos en un referente nacional, nuestra pasión
+                por la tecnología y el compromiso contigo han sido siempre nuestro motor.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2010 - El Origen de TociTech</h4>
+                        <p>Nace TociTech, fundado por un grupo de entusiastas con la visión de ofrecer componentes de PC
+                            de alto rendimiento y un servicio técnico sin igual en nuestra ciudad.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2014 - Apertura de la Primera Tienda Física</h4>
+                        <p>Inauguramos nuestra primera tienda, creando un espacio para que la comunidad gamer y los
+                            profesionales de la tecnología pudieran encontrar asesoría experta y los mejores
+                            componentes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2017 - Conquistando el Mundo Digital</h4>
+                        <p>Lanzamos nuestra plataforma de e-commerce, TociTech.com, y activamos los <strong>envíos a
+                                todo el país</strong>, llevando nuestra calidad y servicio a cada rincón de México.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2021 - Reconocimiento en la Industria</h4>
+                        <p>Somos galardonados como "Mejor Tienda de Componentes de PC del Año" por nuestra dedicación a
+                            la calidad, innovación y la satisfacción de miles de clientes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Hoy y Hacia el Futuro</h4>
+                        <p>Con más de una década de experiencia, seguimos innovando y expandiendo nuestro catálogo para
+                            ser tu aliado de confianza en la construcción de la tecnología del mañana.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna pregunta, necesitas asesoramiento o quieres saber más sobre nuestros productos? ¡Estamos
+                aquí para ayudarte!</p>
+            <form class="contact-form">
+                <div class="form-message"></div> <!-- Mensajes de validación -->
+                <div class="form-group">
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="Ej: tu.email@dominio.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Asunto:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Ej: Consulta sobre Tarjetas Gráficas">
+                </div>
+                <div class="form-group">
+                    <label for="message">Tu Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required
+                        placeholder="Escribe tu consulta aquí..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Carrito de Compras (Modal/Sidebar) -->
+    <div class="shopping-cart-overlay">
+        <div class="shopping-cart">
+            <div class="cart-header">
+                <h3>Tu Carrito de Compras</h3>
+                <i class="fas fa-times close-cart"></i>
+            </div>
+            <div class="cart-items">
+                <!-- Los productos añadidos se insertarán aquí con JavaScript -->
+                <p class="empty-cart-message">Tu carrito está vacío.</p>
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="cart-delivery">
+                    <label for="delivery-option">Opción de Entrega:</label>
+                    <select id="delivery-option">
+                        <option value="standard" data-cost="10.00">Estándar (3-5 días) - $10.00</option>
+                        <option value="express" data-cost="25.00">Express (1-2 días) - $25.00</option>
+                        <option value="pickup" data-cost="0.00">Recogida en tienda (Gratis)</option>
+                    </select>
+                </div>
+                <div class="cart-total final-total">
+                    <span>Total Final:</span>
+                    <span id="cart-final-total">$0.00</span>
+                </div>
+                <button class="btn btn-checkout">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página único -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-quote">
+                <p>"Construyendo el futuro, un componente a la vez."</p>
+                <p>&copy; 2025 TociTech. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-cta">
+                <h4>¿Listo para potenciar tu equipo?</h4>
+                <a href="#products" class="btn btn-primary">Explora Ahora</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
